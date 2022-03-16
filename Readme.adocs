@@ -1,22 +1,31 @@
 
 
 How to set up truffle project from scratch:
+
 On a new directory in VS code:
 1. Install truffle -g
+
 2. Set up a truffle template project by running: truffle unbox React
+
 3. Remove the default migrations and test files except for migrations.sol 
+
 4. Install Open Zeppelin contracts or create your own contracts
+
 5. Create your migrations file and your test files, replacing the ones deleted at the beginning. Migration files have to be numbered
+
 6. For testing, use chai by running: npm install --save chai chai-bn chai-as-promised
+
 7. Update your config file to support Ganache and all other networks you’d like to use for your project.
+
 8. If facing ganache issues, update ganache making network id same as chain id for the desired chain
+
 9. For practicality create an .env file by running: npm install —save dotenv 
+
 10. For more practicality and to deploy contracts easily without needing constant trans signing, install Truffle HDWallet Provider. npm install --save @truffle/hdwallet-provider
 
 RED Presubs testnet Deployment details:
   Deploying 'RedPresubs' to old RED non burnable token
    ----------------------
-   > transaction hash:    0x4c185dfb5fd542814e5cfa3ef1a95ddd53cab68a76bc54531aa678dcb979019c
    > contract address:    0x989f5D242603999e8a2CdDAD308dD19a373d1978
    >BSC scan testnet: https://testnet.bscscan.com/address/0x989f5D242603999e8a2CdDAD308dD19a373d1978
 
@@ -26,7 +35,6 @@ RED Presubs testnet Deployment details:
    RED Presubs testnet Deployment details:
   Deploying 'RedPresubs' to final RED burnable token
    ----------------------
-
    > contract address:   0x4f3af328023C3Bde65dbe583F268959af3c2912E
    >BSC scan testnet: https://testnet.bscscan.com/address/0x4f3af328023C3Bde65dbe583F268959af3c2912E
   
@@ -34,10 +42,13 @@ RED Presubs testnet Deployment details:
 
 
 Basic Instance mehtods calls from development console:
+
 First deploy the truffle console by running: truffle console "note that development network will be selected by default" if you wish to run the console on another network then specify as such: truffle console --network testnet
 
 Then from inside console set up an instance by calling: Let instaince = await InsntaceName.at('instance.address')
+
 Then call instance methods:
+
 instance.token()
 instance.tokenWallet()
 instance.rate()
