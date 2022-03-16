@@ -1,3 +1,4 @@
 #Dev environmet and local tools
 truffle-config.js
 .env
+node_modules
