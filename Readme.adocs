@@ -51,4 +51,4 @@ For truffle install run:
 npm install -D truffle-plugin-verify 
 
 Then run:
-truffle run verify RedPresubs@0x4f3af328023C3Bde65dbe583F268959af3c2912E --network testnet 
+truffle run verify RedPresubs@0Contract-address --network testnet 
