@@ -13,9 +13,9 @@ module.exports = async function (deployer) {
 	// Testnet and Prod Set up
 
 	//let addr = await web3.eth.getAccounts();
-	let addr = await '0x49861E23041382F03334CACAfB372f13959E49Bc';
-	let addr2 = '0xc96dAEC94C38CbDA6Dc1eb59E0d6Ff0D2f7A1631';
+	let wallet = await '0x279550601C7D5Ae77e0026524eA583c4Ed435cb3';
+	let tokenWallet = '0x8c9c1807eFE411076D705060cBE13359193e43b8';
 	let RedToken = process.env.RED_ADDRESS2;
 	let rate = web3.utils.toWei('400000', 'wei');
-	await deployer.deploy(RedPresubs, rate, addr, RedToken, addr2);
+	await deployer.deploy(RedPresubs, rate, wallet, RedToken, tokenWallet);
 };
